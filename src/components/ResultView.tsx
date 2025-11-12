@@ -5,7 +5,6 @@ import {
   Download, 
   Share2, 
   Heart, 
-  RotateCcw, 
   Save, 
   Shirt, 
   ArrowLeft,

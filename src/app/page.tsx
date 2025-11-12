@@ -8,6 +8,8 @@ import ClothingUpload from '@/components/ClothingUpload';
 import AIProcessing from '@/components/AIProcessing';
 import ResultView from '@/components/ResultView';
 import GalleryTab from '@/components/GalleryTab';
+import ExploreTab from '@/components/ExploreTab';
+import ProfileTab from '@/components/ProfileTab';
 import Navigation from '@/components/Navigation';
 import { TryOnResult, ClothingItem, TabType, GalleryItem } from '@/lib/types';
 
@@ -110,50 +112,22 @@ export default function ARStyleApp() {
     );
   }
 
-  // Render Explore Tab (Placeholder)
+  // Render Explore Tab
   if (activeTab === 'explore') {
     return (
       <>
-        <div className="min-h-screen bg-gradient-to-br from-white via-purple-50 to-slate-100 p-4 pb-24">
-          <div className="max-w-4xl mx-auto pt-8">
-            <div className="text-center py-16">
-              <div className="p-6 bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl w-fit mx-auto mb-6">
-                <span className="text-4xl">🔍</span>
-              </div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                Explorar Looks
-              </h2>
-              <p className="text-gray-600 mb-8 max-w-md mx-auto">
-                Em breve você poderá descobrir tendências, looks populares e inspirações da comunidade AR Style!
-              </p>
-            </div>
-          </div>
-        </div>
+        <ExploreTab />
         <Navigation activeTab={activeTab} onTabChange={handleTabChange} />
         <Toaster position="top-center" richColors />
       </>
     );
   }
 
-  // Render Profile Tab (Placeholder)
+  // Render Profile Tab
   if (activeTab === 'profile') {
     return (
       <>
-        <div className="min-h-screen bg-gradient-to-br from-white via-purple-50 to-slate-100 p-4 pb-24">
-          <div className="max-w-4xl mx-auto pt-8">
-            <div className="text-center py-16">
-              <div className="p-6 bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl w-fit mx-auto mb-6">
-                <span className="text-4xl">👤</span>
-              </div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                Meu Perfil
-              </h2>
-              <p className="text-gray-600 mb-8 max-w-md mx-auto">
-                Gerencie suas preferências, configurações de privacidade e dados da conta.
-              </p>
-            </div>
-          </div>
-        </div>
+        <ProfileTab />
         <Navigation activeTab={activeTab} onTabChange={handleTabChange} />
         <Toaster position="top-center" richColors />
       </>
